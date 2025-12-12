@@ -1,0 +1,13 @@
+# Compilation outputs 
+*.o
+chip8
+
+# Editor files (neovim swap)
+*.swp
+*.swo
+
+.vscode/
+
+.DS_Store
+
+
