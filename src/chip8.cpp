@@ -67,3 +67,14 @@ void Chip8::LoadRom(const char* filename) {
         delete[] buffer;
     }
 }
+
+void Chip8::EventCycle(){
+    //Fetch
+    opcode = (memory[pc] << 8) | (memory[pc+1]);
+    pc += 2;
+
+    
+
+
+
+}
