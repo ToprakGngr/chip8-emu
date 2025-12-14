@@ -14,11 +14,12 @@ public:
     uint8_t display[64*32] {};
     uint16_t opcode {};
 
-    Chip8(){
-        pc = 0x200;
-        I = 0;
-        sp = 0;
-    }
+    Chip8();
+
+    void LoadRom(const char* filename);
+    void LoadFont();
+    void Initialize();
+    void EventCycle(); 
 
 };
 
