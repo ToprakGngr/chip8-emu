@@ -14,7 +14,7 @@ void Chip8::OP_DXYN(){
         uint8_t spriteByte = memory[I + row];
         
         for(unsigned int col = 0; col < 8; col++){
-            uint8_t spritePixel = spriteByte & (0x80 >> col) // loop through all bytes of col
+            uint8_t spritePixel = spriteByte & (0x80 >> col); // loop through all bytes of col
             uint8_t* screenPixel = &display[(yPos + row) * DISPLAY_WIDTH + (xPos + col)];
 
             if(spritePixel){
