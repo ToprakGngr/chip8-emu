@@ -7,8 +7,9 @@ void Chip8::OP_00E0(){
 
 
 void Chip8::OP_00EE(){
-    pc = stack[sp];
     sp--;
+    pc = stack[sp];
+
 }
 
 
