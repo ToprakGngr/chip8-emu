@@ -83,4 +83,9 @@ void Chip8::OP_FX65(){
     }
 }
 
+void Chip08::OP_ANNN(){
+    uint16_t value = (opcode & 0x0FFF);
+    I = value;
+}
+
 
