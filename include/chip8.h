@@ -18,7 +18,8 @@ public:
     uint16_t opcode {};
 
     Chip8();
-
+    
+    void UpdateTimers();
     void LoadRom(const char* filename);
     void LoadFont();
     void EventCycle(); 

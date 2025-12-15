@@ -175,6 +175,11 @@ void Chip8::EventCycle(){
     // Decode - Execute
     (this->*chip8Table[(opcode & 0xF000) >> 12])();
     
+    //if(delay_timer > 0) --delay_timer;
+    //if(sound_timer > 0) --sound_timer;
+}
+
+void Chip8::UpdateTimers() {
     if(delay_timer > 0) --delay_timer;
     if(sound_timer > 0) --sound_timer;
 }
