@@ -1,7 +1,8 @@
 #include "chip8.h"
+#include <cstdlib>
 
 // 6xkk - LD Vx, byte
-void Chip08::OP6XNN(){
+void Chip8::OP_6XNN(){
     uint8_t Vx = (opcode & 0x0F00) >> 8;
     uint8_t value = (opcode & 0x00FF);
 
@@ -9,7 +10,7 @@ void Chip08::OP6XNN(){
 }
 
 // 7xkk - ADD Vx, byte:
-void Chip08::OP7XNN(){
+void Chip8::OP_7XNN(){
     uint8_t Vx = (opcode & 0x0F00) >> 8;
     uint8_t value = (opcode & 0x00FF);
 
