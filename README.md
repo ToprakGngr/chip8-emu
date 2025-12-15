@@ -49,7 +49,6 @@ To build and run this emulator, you will need:
 *   **C++ Compiler**: A modern C++ compiler (e.g., `g++`, `clang++`, or `MSVC`) supporting C++11 or later.
 *   **Build System**: Make or CMake (optional but recommended).
 *   **Graphics Library**: SDL2 (Simple DirectMedia Layer) development libraries.
-    *   *Note: If the project uses a different backend (e.g., Raylib/SFML), ensure those dev libraries are installed.*
 
 ### Installing SDL2
 
@@ -81,8 +80,6 @@ g++ -std=c++17 src/*.cpp -o chip8-emu -I include -lSDL2
 ```
 
 ### Method 2: Using CMake (Recommended)
-
-If a `CMakeLists.txt` is present (usually in `src` or root):
 
 ```bash
 mkdir build
