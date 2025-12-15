@@ -156,7 +156,7 @@ void Chip8::LoadRom(const char* filename) {
             char* buffer = new char[size];
 
             file.seekg(0, std::ios_base::beg);
-            file.read(buffer, length);
+            file.read(buffer, size);
             file.close();
 
             for(long i = 0; i < size; i++){
