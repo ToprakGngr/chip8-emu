@@ -92,3 +92,10 @@ void Chip8::OP_8XYE(){
     V[0xF] = (V[Vx] & 0x80) >> 7;
     V[Vx] = V[Vx] << 1;
 }
+
+void Chip8::OP_CXNN(){
+    uint8_t Vx = (opcode & 0X0F00) >> 8;
+    uint8_t value = opcode & 0x00FF;
+
+    V[Vx] = (rand() % 256) & value;
+}
