@@ -2,6 +2,9 @@
 
 class Chip8{
 public:
+    static const unsigned int DISPLAY_WIDTH = 64;
+    static const unsigned int DISPLAY_HEIGHT = 32;
+
     uint8_t V[16] {};
     uint8_t memory[4096] {};
     uint16_t I {};
@@ -11,7 +14,7 @@ public:
     uint8_t delay_timer {};
     uint8_t sound_timer {};
     uint8_t keypad[16] {};
-    uint8_t display[64*32] {};
+    uint8_t display[DISPLAY_WIDTH*DISPLAY_HEIGHT] {};
     uint16_t opcode {};
 
     Chip8();
